@@ -17,6 +17,7 @@ def get_url(url,headers={}):
     headers['X-auth-token'] = token['token']
     try:
         response = requests.get(url, headers=headers, verify=False)
+        response.raise_for_status()
     except requests.exceptions.RequestException as cerror:
         print("Error processing request", cerror)
         sys.exit(1)
