@@ -3,4 +3,5 @@ requests
 pyOpenSSL
 pandas
 matplotlib
+dnacentersdk
 
